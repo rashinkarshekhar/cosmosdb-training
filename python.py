@@ -18,24 +18,24 @@ def create_database_unsharded_collection(client):
     """Create sample database with shared throughput if it doesn't exist and
     an unsharded collection
     """
-    db = client thinknyx
+    db = client DATABASE
     # Create database if it doesn't exist
-    if thinknyx not in client.list_database_names():
+    if DATABASE not in client.list_database_names():
         # Database with 400 RU throughput that can be shared across the
         # DB's collections
         db.command({"customAction": "CreateDatabase", "offerThroughput": 400})
-        print("Created db {} with shared throughput".format(thinknyx))
+        print("Created db {} with shared throughput".format DATABASE)
     # Create collection if it doesn't exist
-    if thinknyx not in db.list_collection_names():
+    if COLLECTION not in db.list_collection_names():
         # Creates a unsharded collection that uses the DBs shared throughput
         db.command(
             {
                 "customAction": "CreateCollection",
-                "collection": thinknyx,
+                "collection": COLLECTION,
             }
         )
-        print("Created collection {}".format(thinknyx))
-    return db thinknyx
+        print("Created collection {}".format COLLECTION)
+    return db COLLECTION
 
 def main():
     """Connect to the API for MongoDB, create DB and collection, perform
