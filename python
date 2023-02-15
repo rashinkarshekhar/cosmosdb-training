@@ -8,7 +8,7 @@ CONNECTION_STRING = getpass.getpass(
 )
 #print("Using " + CONNECTION_STRING + "to connect with MongoDB")
 
-
+# variables
 DATABASE = "thinknyx"
 COLLECTION = "thinknyx"
 FIELD = "Day"
