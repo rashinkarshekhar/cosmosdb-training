@@ -1,0 +1,16 @@
+def main():
+    """Connect to the API for MongoDB, create DB and collection, perform
+    CRUD operations
+    """
+    client = pymongo.MongoClient(CONNECTION_STRING)
+    try:
+        client.server_info()  # validate connection string
+    except pymongo.errors.ServerSelectionTimeoutError:
+        raise TimeoutError(
+            "Invalid API for MongoDB connection string \
+                or timed out when attempting to connect"
+        )
+    collection = create_database_unsharded_collection(client)
+    
+if __name__ == "__main__":
+    main()
