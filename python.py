@@ -18,7 +18,7 @@ def create_database_unsharded_collection(client):
     """Create sample database with shared throughput if it doesn't exist and
     an unsharded collection
     """
-    db = client DATABASE
+    db = client[DATABASE]
     # Create database if it doesn't exist
     if DATABASE not in client.list_database_names():
         # Database with 400 RU throughput that can be shared across the
