@@ -102,7 +102,7 @@ def update_document(collection, document_id):
     #till wednesday
 
     
-}
+
 # libraries
 import json
 import getpass
