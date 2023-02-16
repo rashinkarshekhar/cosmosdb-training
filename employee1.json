@@ -1,0 +1,11 @@
+{
+    "Org": "BFL",
+    "Employee Details": {
+        "Dept_Name": "IT",
+        "total_Employees": "700",
+        "Mode": "Office",
+    
+	"Location":"Mantri",
+	"sub_dept":"ATG"
+    }
+}
