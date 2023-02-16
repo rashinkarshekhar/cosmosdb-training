@@ -100,3 +100,15 @@ def update_document(collection, document_id):
         )
     )
     #till wednesday
+
+    {
+    "Org": "BFL",
+    "Employee Details": {
+        "Dept_Name": "IT",
+        "total_Employees": "700",
+        "Mode": "Office",
+    
+	"Location":"Mantri",
+	"sub_dept":"ATG"
+    }
+}
