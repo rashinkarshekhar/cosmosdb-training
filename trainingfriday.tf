@@ -5,7 +5,7 @@ variable "location" {
   default = "eastus"
 }
 variable "name" {
-  default = "thinknyx"
+  default = "thinknyx-shekhar"
 }
 resource "azurerm_resource_group" "thinknyx" {
   location = var.location
